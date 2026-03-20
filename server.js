@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(compression());
 
 // Cache static assets (images, CSS, JS) for 30 days
-app.use(express.static(path.join(__dirname, 'public'), {
+app.use(express.static(__dirname, {
   maxAge: '30d',
   etag: true,
   lastModified: true,
