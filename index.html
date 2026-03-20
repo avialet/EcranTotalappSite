@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcranTotal — Mode Présentation pour macOS</title>
+  <meta name="description" content="Préparez votre écran en un clic avant chaque partage d'écran. Cache les apps, nettoie le bureau, applique un fond pro. 100% natif macOS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-eye-icon">
+          <svg viewBox="0 0 28 28" fill="none" class="eye-svg">
+            <path d="M14 6C7.5 6 2.5 14 2.5 14S7.5 22 14 22S25.5 14 25.5 14S20.5 6 14 6Z" fill="url(#eyeGrad)" opacity="0.9"/>
+            <circle cx="14" cy="14" r="4.5" fill="#0d0d1a"/>
+            <circle cx="14" cy="14" r="2" fill="url(#eyeGrad2)"/>
+            <defs>
+              <linearGradient id="eyeGrad" x1="2.5" y1="6" x2="25.5" y2="22">
+                <stop stop-color="#E84393"/>
+                <stop offset="1" stop-color="#00B894"/>
+              </linearGradient>
+              <linearGradient id="eyeGrad2" x1="12" y1="12" x2="16" y2="16">
+                <stop stop-color="#fd79a8"/>
+                <stop offset="1" stop-color="#55efc4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>EcranTotal</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Fonctionnalités</a>
+        <a href="#demo" class="nav-link">Comment ça marche</a>
+        <a href="#download" class="nav-cta">Télécharger</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="blob-container" id="hero-blob">
+        <div class="eye-hero">
+          <div class="eye-outer">
+            <div class="eye-iris">
+              <div class="eye-pupil"></div>
+            </div>
+          </div>
+          <div class="eye-lid eye-lid-top"></div>
+          <div class="eye-lid eye-lid-bottom"></div>
+        </div>
+        <div class="blob-pulse-ring"></div>
+        <div class="blob-pulse-ring ring-2"></div>
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        <span class="title-gradient">EcranTotal</span>
+      </h1>
+      <p class="hero-tagline" id="hero-tagline">
+        Mode Présentation en un clic.<br>
+        <span class="tagline-highlight">Cachez tout. Montrez l'essentiel.</span>
+      </p>
+      <div class="hero-cta-group" id="hero-cta">
+        <a href="#download" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Télécharger pour macOS
+        </a>
+        <p class="hero-meta">macOS 13+ · Apple Silicon & Intel · Gratuit</p>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Before / After -->
+  <section class="before-after" id="before-after">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label" id="ba-label">Avant / Après</p>
+        <h2 class="section-title" id="ba-title">Un clic. Deux mondes.</h2>
+      </div>
+      <div class="ba-container" id="ba-container">
+        <div class="ba-card ba-before">
+          <div class="ba-badge ba-badge-before">Avant</div>
+          <div class="ba-screen">
+            <div class="ba-menubar">
+              <div class="ba-menubar-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="ba-menubar-items">
+                <div class="ba-menubar-item"></div>
+                <div class="ba-menubar-item"></div>
+              </div>
+            </div>
+            <div class="ba-desktop ba-desktop-messy">
+              <div class="ba-window ba-window-1">
+                <div class="ba-window-bar"><span></span><span></span><span></span></div>
+                <div class="ba-window-content">
+                  <div class="ba-line w60"></div>
+                  <div class="ba-line w80"></div>
+                  <div class="ba-line w40"></div>
+                </div>
+              </div>
+              <div class="ba-window ba-window-2">
+                <div class="ba-window-bar"><span></span><span></span><span></span></div>
+                <div class="ba-window-content">
+                  <div class="ba-chat-bubble"></div>
+                  <div class="ba-chat-bubble short"></div>
+                </div>
+              </div>
+              <div class="ba-window ba-window-3">
+                <div class="ba-window-bar"><span></span><span></span><span></span></div>
+                <div class="ba-window-content">
+                  <div class="ba-notif"></div>
+                </div>
+              </div>
+              <div class="ba-icon-grid">
+                <div class="ba-icon"></div>
+                <div class="ba-icon"></div>
+                <div class="ba-icon"></div>
+                <div class="ba-icon"></div>
+                <div class="ba-icon"></div>
+                <div class="ba-icon"></div>
+              </div>
+            </div>
+          </div>
+          <p class="ba-caption">Bureau encombré, apps personnelles visibles, notifications...</p>
+        </div>
+        <div class="ba-arrow" id="ba-arrow">
+          <svg viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="23" stroke="url(#arrowGrad)" stroke-width="2"/>
+            <path d="M16 24h16M26 18l6 6-6 6" stroke="url(#arrowGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="arrowGrad" x1="0" y1="0" x2="48" y2="48">
+                <stop stop-color="#E84393"/>
+                <stop offset="1" stop-color="#00B894"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="ba-card ba-after">
+          <div class="ba-badge ba-badge-after">Après</div>
+          <div class="ba-screen">
+            <div class="ba-menubar">
+              <div class="ba-menubar-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="ba-menubar-items">
+                <div class="ba-menubar-eye">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M8 4C4.5 4 1.5 8 1.5 8S4.5 12 8 12S14.5 8 14.5 8S11.5 4 8 4Z" stroke="#E84393" stroke-width="1.2"/>
+                    <line x1="2" y1="14" x2="14" y2="2" stroke="#E84393" stroke-width="1.2"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="ba-desktop ba-desktop-clean">
+              <img src="wallpaper-preview.jpg" alt="EcranTotal wallpaper" class="ba-wallpaper"/>
+            </div>
+          </div>
+          <p class="ba-caption">Bureau immaculé, fond EcranTotal, aucune distraction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="features-line-wrap">
+      <div class="features-line" id="features-line"></div>
+    </div>
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label" id="features-label">Fonctionnalités</p>
+        <h2 class="section-title" id="features-title">Tout caché.<br>Rien à craindre.</h2>
+      </div>
+      <div class="features-grid" id="features-grid">
+        <div class="feature-card" data-feature="0">
+          <div class="feature-card-glow"></div>
+          <div class="feature-number">01</div>
+          <div class="feature-icon-wrap">
+            <span class="feature-icon">👁</span>
+          </div>
+          <h3>Un clic suffit</h3>
+          <p>Activez depuis la barre de menus avec <kbd>⌘</kbd>+<kbd>⇧</kbd>+<kbd>P</kbd> ou un simple clic sur l'icône œil.</p>
+          <div class="feature-tag">Menu Bar</div>
+        </div>
+        <div class="feature-card" data-feature="1">
+          <div class="feature-card-glow"></div>
+          <div class="feature-number">02</div>
+          <div class="feature-icon-wrap">
+            <span class="feature-icon">🎭</span>
+          </div>
+          <h3>Animation de transition</h3>
+          <p>Un rideau animé de blobs couvre l'écran pendant que tout se met en place. Personne ne voit rien.</p>
+          <div class="feature-tag">Transition</div>
+        </div>
+        <div class="feature-card" data-feature="2">
+          <div class="feature-card-glow"></div>
+          <div class="feature-number">03</div>
+          <div class="feature-icon-wrap">
+            <span class="feature-icon">🚫</span>
+          </div>
+          <h3>Apps invisibles</h3>
+          <p>Les apps cachées disparaissent totalement du <kbd>⌘</kbd>+<kbd>Tab</kbd>. Impossible de switcher dessus par erreur.</p>
+          <div class="feature-tag">SIGSTOP</div>
+        </div>
+        <div class="feature-card" data-feature="3">
+          <div class="feature-card-glow"></div>
+          <div class="feature-number">04</div>
+          <div class="feature-icon-wrap">
+            <span class="feature-icon">🎨</span>
+          </div>
+          <h3>Fond d'écran pro</h3>
+          <p>Un fond pastel "Ecran Total" élégant remplace automatiquement votre wallpaper sur tous les écrans.</p>
+          <div class="feature-tag">Multi-écran</div>
+        </div>
+        <div class="feature-card" data-feature="4">
+          <div class="feature-card-glow"></div>
+          <div class="feature-number">05</div>
+          <div class="feature-icon-wrap">
+            <span class="feature-icon">🧹</span>
+          </div>
+          <h3>Bureau nettoyé</h3>
+          <p>Icônes du bureau masquées, fenêtres Finder fermées. Un bureau vierge et professionnel.</p>
+          <div class="feature-tag">Finder</div>
+        </div>
+        <div class="feature-card" data-feature="5">
+          <div class="feature-card-glow"></div>
+          <div class="feature-number">06</div>
+          <div class="feature-icon-wrap">
+            <span class="feature-icon">↩️</span>
+          </div>
+          <h3>Restauration parfaite</h3>
+          <p>Désactivez et tout revient exactement comme avant. Apps, fond d'écran, icônes. Rien n'est perdu.</p>
+          <div class="feature-tag">Réversible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="demo" id="demo">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label" id="demo-label">Comment ça marche</p>
+        <h2 class="section-title" id="demo-title">Cliquez. Présentez. C'est tout.</h2>
+      </div>
+      <div class="demo-flow" id="demo-flow">
+        <div class="demo-step" data-step="0">
+          <div class="demo-step-number">1</div>
+          <div class="demo-step-visual">
+            <div class="demo-menubar-click">
+              <div class="demo-menubar-sim">
+                <div class="demo-eye-icon">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="M10 4.5C5.8 4.5 2.5 10 2.5 10S5.8 15.5 10 15.5S17.5 10 17.5 10S14.2 4.5 10 4.5Z" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="demo-click-ring"></div>
+            </div>
+          </div>
+          <h3>Cliquez sur l'icône</h3>
+          <p>L'œil dans votre barre de menus</p>
+        </div>
+        <div class="demo-connector">
+          <svg viewBox="0 0 80 20" class="connector-svg">
+            <path d="M0 10 Q40 10 80 10" stroke="url(#connGrad1)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+            <defs>
+              <linearGradient id="connGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#E84393" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#00B894" stop-opacity="0.5"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="demo-step" data-step="1">
+          <div class="demo-step-number">2</div>
+          <div class="demo-step-visual">
+            <div class="demo-transition-anim">
+              <div class="demo-curtain"></div>
+              <div class="demo-curtain c2"></div>
+              <div class="demo-curtain c3"></div>
+            </div>
+          </div>
+          <h3>La transition se lance</h3>
+          <p>Un rideau animé couvre l'écran</p>
+        </div>
+        <div class="demo-connector">
+          <svg viewBox="0 0 80 20" class="connector-svg">
+            <path d="M0 10 Q40 10 80 10" stroke="url(#connGrad2)" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+            <defs>
+              <linearGradient id="connGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#E84393" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#00B894" stop-opacity="0.5"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="demo-step" data-step="2">
+          <div class="demo-step-number">3</div>
+          <div class="demo-step-visual">
+            <div class="demo-clean-screen">
+              <div class="demo-screen-frame">
+                <img src="wallpaper-preview.jpg" alt="Clean screen" class="demo-screen-img"/>
+                <div class="demo-checkmark">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Écran prêt</h3>
+          <p>Bureau propre, apps cachées, c'est parti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modes -->
+  <section class="modes" id="modes">
+    <div class="section-inner">
+      <div class="section-header">
+        <p class="section-label" id="modes-label">Modes</p>
+        <h2 class="section-title" id="modes-title">Votre contrôle, vos règles.</h2>
+      </div>
+      <div class="modes-grid" id="modes-grid">
+        <div class="mode-card" id="mode-blacklist">
+          <div class="mode-icon">🚫</div>
+          <h3>Liste Noire</h3>
+          <p>Ne cachez que les apps choisies : Slack, Messages, WhatsApp... Le reste est visible.</p>
+          <div class="mode-example">
+            <span class="mode-app hidden-app">Slack</span>
+            <span class="mode-app hidden-app">Messages</span>
+            <span class="mode-app visible-app">Zoom</span>
+            <span class="mode-app visible-app">Keynote</span>
+          </div>
+        </div>
+        <div class="mode-card" id="mode-whitelist">
+          <div class="mode-icon">✅</div>
+          <h3>Liste Blanche</h3>
+          <p>Cachez TOUT sauf les apps essentielles. Mode focus ultime pour les présentations.</p>
+          <div class="mode-example">
+            <span class="mode-app visible-app">Zoom</span>
+            <span class="mode-app visible-app">Keynote</span>
+            <span class="mode-app hidden-app">Tout le reste</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section class="download" id="download">
+    <div class="section-inner">
+      <div class="download-card" id="download-card">
+        <div class="download-glow"></div>
+        <div class="download-blob-bg">
+          <svg viewBox="0 0 300 300" class="download-blob-svg">
+            <path id="downloadBlobPath" fill="url(#dlBlobGrad)" opacity="0.15"/>
+            <defs>
+              <linearGradient id="dlBlobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E84393"/>
+                <stop offset="100%" stop-color="#00B894"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h2 class="download-title">Prêt à présenter&nbsp;?</h2>
+        <p class="download-desc">Téléchargez EcranTotal et ne vous souciez plus jamais de votre bureau avant un call.</p>
+        <a href="#" class="btn btn-primary btn-large">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Télécharger EcranTotal
+        </a>
+        <div class="download-meta">
+          <span class="download-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="badge-icon">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+              <path d="M8 12l3 3 5-5"/>
+            </svg>
+            macOS 13+
+          </span>
+          <span class="download-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="badge-icon">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M9 9h6v6H9z"/>
+            </svg>
+            Apple Silicon & Intel
+          </span>
+          <span class="download-badge">Gratuit</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="support" id="support">
+    <div class="section-inner">
+      <div class="support-card" id="support-card">
+        <div class="support-icon">🎁</div>
+        <h2 class="support-title">Un petit geste ?</h2>
+        <p class="support-desc">
+          EcranTotal est gratuit et le restera. Si l'app vous plaît et que l'envie se fait sentir, vous pouvez jeter un œil à ma liste de souhaits Amazon. Rien d'obligatoire, juste un moyen sympa de soutenir le projet.
+        </p>
+        <a href="https://www.amazon.fr/registries/gl/guest-view/3EQGMKFGHSYAL" target="_blank" rel="noopener noreferrer" class="btn btn-support">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          Voir ma liste de souhaits
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-eye-icon small">
+          <svg viewBox="0 0 28 28" fill="none" class="eye-svg">
+            <path d="M14 6C7.5 6 2.5 14 2.5 14S7.5 22 14 22S25.5 14 25.5 14S20.5 6 14 6Z" fill="url(#eyeGradF)" opacity="0.9"/>
+            <circle cx="14" cy="14" r="4.5" fill="#0d0d1a"/>
+            <circle cx="14" cy="14" r="2" fill="url(#eyeGrad2F)"/>
+            <defs>
+              <linearGradient id="eyeGradF" x1="2.5" y1="6" x2="25.5" y2="22">
+                <stop stop-color="#E84393"/>
+                <stop offset="1" stop-color="#00B894"/>
+              </linearGradient>
+              <linearGradient id="eyeGrad2F" x1="12" y1="12" x2="16" y2="16">
+                <stop stop-color="#fd79a8"/>
+                <stop offset="1" stop-color="#55efc4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="footer-name">EcranTotal</span>
+      </div>
+      <p class="footer-credit">
+        Créé par <a href="https://www.linkedin.com/in/aurelien-vialet-a9834b/" target="_blank" rel="noopener noreferrer"><strong>Aurélien Vialet</strong></a> — Fait avec ❤️ et Swift
+      </p>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="script.js?v=1"></script>
+</body>
+</html>
