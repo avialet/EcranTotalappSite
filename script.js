@@ -346,87 +346,18 @@ gsap.from('#support-card', {
   ease: 'power3.out',
 });
 
-// ─── Hero eye particle explosion on scroll ───
-(() => {
-  const blobContainer = document.getElementById('hero-blob');
-  if (!blobContainer) return;
-
-  const eyeHero = blobContainer.querySelector('.eye-hero');
-  const PARTICLE_COUNT = 35;
-  const particles = [];
-
-  // Create particles
-  for (let i = 0; i < PARTICLE_COUNT; i++) {
-    const p = document.createElement('div');
-    p.className = 'blob-particle';
-    const size = gsap.utils.random(6, 22);
-    p.style.width = size + 'px';
-    p.style.height = size + 'px';
-    blobContainer.appendChild(p);
-
-    const angle = (i / PARTICLE_COUNT) * Math.PI * 2 + gsap.utils.random(-0.4, 0.4);
-    const distance = gsap.utils.random(100, 350);
-    particles.push({
-      el: p,
-      tx: Math.cos(angle) * distance,
-      ty: Math.sin(angle) * distance - gsap.utils.random(50, 180),
-      rot: gsap.utils.random(-360, 360),
-      scale: gsap.utils.random(0.3, 1),
-    });
-  }
-
-  // Scrub timeline: eye shrinks + particles scatter
-  const explodeTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.hero',
-      start: 'top top',
-      end: '70% top',
-      scrub: 0.8,
-    },
-  });
-
-  if (eyeHero) {
-    explodeTl.to(eyeHero, {
-      scale: 0.3,
-      opacity: 0,
-      duration: 1,
-      ease: 'none',
-    }, 0);
-  }
-
-  explodeTl.to('.blob-pulse-ring', {
-    opacity: 0,
-    scale: 0.5,
-    duration: 0.5,
-    ease: 'none',
-  }, 0);
-
-  particles.forEach((p, i) => {
-    const delay = (i / PARTICLE_COUNT) * 0.3;
-    gsap.set(p.el, { opacity: 0, scale: 0 });
-
-    explodeTl.fromTo(p.el,
-      { x: 0, y: 0, opacity: 0, scale: 0, rotation: 0 },
-      {
-        x: p.tx,
-        y: p.ty,
-        opacity: 1,
-        scale: p.scale,
-        rotation: p.rot,
-        duration: 1,
-        ease: 'none',
-      },
-      delay
-    );
-
-    explodeTl.to(p.el, {
-      opacity: 0,
-      scale: 0,
-      duration: 0.4,
-      ease: 'none',
-    }, 0.7 + delay * 0.5);
-  });
-})();
+// ─── Hero curtain fade on scroll ───
+gsap.to('#hero-blob', {
+  scrollTrigger: {
+    trigger: '.hero',
+    start: 'top top',
+    end: '60% top',
+    scrub: 0.8,
+  },
+  scale: 0.6,
+  opacity: 0,
+  ease: 'none',
+});
 
 // ─── Hero content fade on scroll ───
 gsap.to('.hero-content', {
